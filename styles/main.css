@@ -73,6 +73,8 @@ img {
     --clr-txt-support: #2196F3;
     --slider-backgr: #EEEEEE;
     --border-color-solid: rgba(128, 128, 128, 0.247);
+    --hover-icon: #AFB1B8;
+    --hover-footer: rgba(255, 255, 255, 0.1);
 
 }
 
@@ -109,7 +111,6 @@ body {
 
 .header__logo {
     display: flex;
-    cursor: pointer;
 }
 
 .logo__text {
@@ -143,8 +144,6 @@ body {
 .nav__contact {
     margin-left: auto;
 }
-
-
 
 .list__link {
     margin-left: 50px;
@@ -185,6 +184,12 @@ body {
     width: 100%;
     padding: 200px 0;
     background-color: var(--darkgrey-background-clr);
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.4)), url("../images/backgraund/01_backgroundImg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-size: 1600px;
+
 }
 
 .effect>h1 {
@@ -392,7 +397,8 @@ address {
 .filter__btn:hover {
     background-color: var(--clr-txt-support);
     color: var(--light-background-clr);
-    transition: 1s;
+    transition: 0.3s;
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.12);
 }
 
 /* ------------gallery ----------------*/
@@ -409,6 +415,11 @@ address {
     max-width: 370px;
     position: relative;
     border-bottom: 1px solid var(--border-color-solid);
+}
+
+.gallery__wrapper:hover {
+    cursor: pointer;
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .gallery__wrapper ::after {
@@ -446,4 +457,140 @@ address {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--pargraf-clr);
+}
+
+/*----------------- clients ------------*/
+.clients {
+    text-align: center;
+}
+
+/* ----------icons------------*/
+.icon-mail {
+    fill: var(--pargraf-clr);
+    stroke: var(--pargraf-clr);
+}
+
+.mail {
+    margin-left: 10px;
+}
+
+.icon-box__mail,
+.icon-box__phone {
+    display: flex;
+    align-items: center;
+}
+
+.icon-box__mail:hover .icon-mail {
+    fill: var(--clr-txt-support);
+    stroke: var(--clr-txt-support);
+}
+
+.icon-box__mail:hover .mail {
+    color: var(--clr-txt-support);
+}
+
+.icon-box__mail {
+    cursor: pointer;
+}
+
+.icon-phone {
+    fill: var(--pargraf-clr);
+    stroke: var(--pargraf-clr);
+}
+
+.link-phone {
+    margin-left: 10px;
+}
+
+.icon-box__phone {
+    margin-left: 31px;
+}
+
+.wrapper-icon {
+    padding: 25px 100px 19px 100px;
+    background-color: var(--light-background-clr);
+    margin-bottom: 28px;
+}
+
+.icon-sputnik {
+    fill: var(--clr-txt-support);
+}
+
+.cards-hover {
+    fill: none;
+    cursor: pointer;
+}
+
+.cards-hover:hover {
+    fill: var(--clr-txt-support);
+    --hover-icon: var(--white-background-clr)
+}
+
+.social-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 31px 0px 31px;
+}
+
+.clients {
+    padding: 95px 0;
+}
+
+.txtclnt {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--clr-txt-main);
+}
+
+.clientwrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-hover {
+    fill: none;
+    cursor: pointer;
+}
+
+.client-hover:hover {
+    --hover-icon: var(--clr-txt-support)
+}
+
+.footerwrapper {
+    display: flex;
+}
+
+.foot-box {
+    padding-left: 85px;
+}
+
+.txtfooter {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-clr);
+    margin-bottom: 20px;
+    margin-top: 11px;
+
+}
+
+.foot-wrapper {
+    display: flex;
+}
+
+.foot-hover {
+    cursor: pointer;
+    fill: var(--hover-footer);
+    margin-right: 10px;
+}
+
+.foot-hover:hover {
+    fill: var(--clr-txt-support);
+    --hover-icon: var(--white-background-clr)
 }
